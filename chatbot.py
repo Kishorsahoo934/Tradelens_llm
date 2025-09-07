@@ -14,7 +14,7 @@ from langchain.chains import RetrievalQA
 
 # ---------------- Setup ----------------
 load_dotenv()
-print("API Key Loaded:", os.getenv("GOOGLE_API_KEY"))
+print("API Key Loaded:", os.getenv("AIzaSyBz80LVIZEwFDppx8s0Ii8AEJ3CQYTEfsc"))
 
 llm = ChatGoogleGenerativeAI(model="models/gemini-1.5-flash", temperature=0.1)
 
