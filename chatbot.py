@@ -13,10 +13,11 @@ from langchain_community.vectorstores import FAISS
 from langchain.chains import RetrievalQA
 
 # ---------------- Setup ----------------
-load_dotenv()
-print("API Key Loaded:", os.getenv("AIzaSyBz80LVIZEwFDppx8s0Ii8AEJ3CQYTEfsc"))
+GOOGLE_API_KEY = "AIzaSyBz80LVIZEwFDppx8s0Ii8AEJ3CQYTEfsc"  # <-- Add your API key here
+os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+print("API Key Loaded:", os.getenv("GOOGLE_API_KEY"))
 
-llm = ChatGoogleGenerativeAI(model="models/gemini-1.5-flash", temperature=0.1)
+llm = ChatGoogleGenerativeAI(model="models/gemini-1.5-flash", temperature=0.1,api_key=GOOGLE_API_KEY)
 
 
 # -------- PDF Loader --------
